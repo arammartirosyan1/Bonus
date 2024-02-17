@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Անձնական թերթիկ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        input[type="text"] {
+            font-size: 13px;
+        }
+        
+        textarea[type="text"] {
+            font-size: 13px;
+        }
+        
+        input[type="tel"] {
+            font-size: 13px;
+        }
+        
+        input[type="email"] {
+            font-size: 13px;
+        }
+        
+        .header img {
+            width: 15%;
+        }
+        
+        .header {
+            width: 18cm;
+            margin: 0.3cm auto;
+            display: flex;
+        }
+        
+        div.h3 {
+            margin: auto;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        .first-container {
+            width: 19.5cm;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        h7 {
+            color: black;
+        }
+        
+        .first-container h8 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .first-container .line-1 {
+            font-size: 18.5px;
+        }
+        
+        .first-container h9 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .full-width {
+            width: 10.4cm;
+            height: 0.6cm;
+            margin: 3px;
+            font-size: 11px;
+        }
+        
+        .half-width {
+            width: 2.8cm;
+            margin: 3px;
+            height: 0.6cm;
+        }
+        
+        .right-1 {
+            margin-right: 30px;
+        }
+        
+        .right-2 {
+            margin-right: 0px;
+        }
+        
+        .right-3 {
+            margin-right: 17px;
+        }
+        
+        .picture {
+            width: 3cm;
+            height: 3.5cm;
+        }
+        
+        .picture-1 {
+            width: 2.67cm;
+            height: 1cm;
+        }
+        
+        .second-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .second-container span {
+            font-weight: bold;
+            font-size: 13px;
+            height: 0.77cm;
+        }
+        
+        .second-container h9 {
+            font-size: 13px;
+            height: 0.77cm;
+        }
+        
+        .second-container h6 {
+            height: 0.78cm;
+        }
+        
+        .second-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .second-container .first-line textarea,
+        .second-container .third-line textarea {
+            width: 6.6cm;
+            height: 1cm;
+            resize: none;
+            overflow: hidden;
+        }
+        
+        .second-container .second-line input {
+            width: 2cm;
+            height: 0.98cm;
+            margin: 3px 0px 5px;
+        }
+        
+        .second-container h10 {
+            font-size: 12px;
+            height: 0.77cm;
+            margin-left: 25px;
+        }
+        
+        .third-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .third-container h9 {
+            font-size: 13px;
+            height: 0.77cm;
+        }
+        
+        .third-container h10 {
+            font-size: 12px;
+            height: 0.77cm;
+            margin-left: 4px;
+        }
+        
+        .third-container .line h10 {
+            font-size: 12px;
+            height: 0.77cm;
+            margin-left: 40px;
+        }
+        
+        .third-container h8 {
+            height: 0.78cm;
+            font-weight: bold;
+            font-size: 13px;
+            margin-right: 0.2cm;
+        }
+        
+        .third-container h6 {
+            height: 0.78cm;
+        }
+        
+        .third-container input {
+            width: 3.3cm;
+            height: 0.6cm;
+        }
+        
+        .third-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .third-container .line textarea {
+            width: 5cm;
+            height: 1cm;
+            resize: none;
+            overflow: hidden;
+        }
+        
+        .third-container .line-1 textarea {
+            width: 3.7cm;
+            height: 1cm;
+            resize: none;
+            overflow: hidden;
+        }
+        
+        .third-container .small-width {
+            width: 1.5cm;
+            height: 0.6cm;
+            margin: 10px 5px;
+        }
+        
+        .fourth-container {
+            width: 19.2cm;
+            margin: 0 auto;
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        .fourth-container .first-line p {
+            height: 0.77cm;
+            font-size: 13px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .fourth-container .small-width {
+            width: 1cm;
+            height: 0.6cm;
+            margin: 18px 10px 0px;
+        }
+        
+        .fourth-container .third-line {
+            margin: 0px 15px 0px;
+            margin-top: 17px;
+        }
+        
+        .fourth-container .third-line h8 {
+            height: 0.77cm;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        
+        .fourth-container .small-width-1 {
+            width: 1.5cm;
+            height: 0.6cm;
+            margin: 23px 20px;
+        }
+        
+        .fourth-container .fourth-line {
+            margin: 0px 20px;
+        }
+        
+        .fourth-container h10 {
+            font-size: 10px;
+            margin: 5px 30px;
+        }
+        
+        .fourth-container .half-width-2 {
+            margin-top: 14px;
+            width: 2.5cm;
+            height: 0.6cm;
+        }
+        
+        .fourth-container .fourth-line p {
+            margin-top: 14px;
+            font-size: 12px;
+        }
+        
+        .fourth-container .fifth-line {
+            margin-left: 7px;
+        }
+        
+        .fourth-container .half-width {
+            width: 2.5cm;
+            height: 0.6cm;
+            margin: 0px 0;
+        }
+        
+        .fourth-container .half-width-3 {
+            width: 2.5cm;
+            height: 0.6cm;
+            margin-top: 13px;
+        }
+        
+        .fifth-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .fifth-container span {
+            height: 0.77cm;
+            font-size: 13px;
+            font-weight: bold;
+            margin-right: 0px;
+        }
+        
+        .fifth-container h10 {
+            height: 0.78cm;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        
+        .fifth-container .mid {
+            margin-left: 65px;
+            margin-right: 10px;
+        }
+        
+        .fifth-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .fifth-container .first-line input {
+            width: 4cm;
+            height: 0.6cm;
+            margin: 3px;
+        }
+        
+        .fifth-container .second-line input {
+            width: 7cm;
+            height: 0.6cm;
+            margin: 3px 10px;
+        }
+        
+        .fifth-container h9 {
+            font-size: 13px;
+            height: 0.77cm;
+        }
+        
+        .fifth-container h6 {
+            height: 0.78cm;
+        }
+        
+        .fifth-container .third-line-1 textarea,
+        .fifth-container .third-line-2 textarea {
+            width: 6.6cm;
+            height: 1cm;
+            resize: none;
+            overflow: hidden;
+        }
+        
+        .fifth-container .fourth-line input {
+            width: 2.5cm;
+            height: 0.98cm;
+            margin: 2px 8px 5px;
+        }
+        
+        .fifth-container h11 {
+            font-size: 12px;
+            height: 0.77cm;
+            margin-left: 25px;
+        }
+        
+        .fifth-container .full-line input {
+            width: 19cm;
+            height: 0.6cm;
+            margin: 5px;
+        }
+        
+        .fifth-container h8 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 340px;
+        }
+        
+        .sixth-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .sixth-container span {
+            height: 0.77cm;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .sixth-container .sixth {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 130px;
+        }
+        
+        .sixth-container h10 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        
+        .sixth-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .sixth-container .first-line input,
+        .sixth-container .third-line input {
+            width: 5cm;
+            height: 0.6cm;
+            margin: 3px;
+        }
+        
+        .sixth-container .second-line input {
+            width: 8.5cm;
+            height: 0.6cm;
+            margin: 3px;
+        }
+        
+        .seventh-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .seventh-container span {
+            height: 0.77cm;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .seventh-container .first-line h10 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        
+        .seventh-container .second-line h10 {
+            height: 0.78cm;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-left: 100px;
+        }
+        
+        .seventh-container .first-line input,
+        .seventh-container .second-line input {
+            width: 9.4cm;
+            height: 0.6cm;
+            margin: 3px;
+        }
+        
+        .seventh-container .education {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .seventh-container .third-line h9 {
+            height: 0.78cm;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        
+        .seventh-container .third-line h10 {
+            height: 0.78cm;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        
+        .seventh-container .third-line input {
+            width: 4.6cm;
+            height: 0.6cm;
+            margin: 3px;
+        }
+        
+        .seventh-container .fourth-line h10 {
+            height: 0.78cm;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-left: 270px;
+        }
+        
+        .seventh-container .fourth-line input {
+            width: 19cm;
+            height: 0.6cm;
+            margin: 5px 10px;
+        }
+        
+        .eighth-container {
+            width: 19.2cm;
+            margin: 0 auto;
+        }
+        
+        .eighth-container .education {
+            display: flex;
+        }
+        
+        .eighth-container .education .text p {
+            height: 0.78cm;
+            font-size: 12px;
+            text-align: justify;
+            margin: 20px 10px;
+        }
+        
+        .eighth-container .education .first-line p {
+            height: 1cm;
+            font-size: 12px;
+            margin: 25px;
+        }
+        
+        .eighth-container .education .second-line input {
+            width: 5cm;
+            height: 0.6cm;
+            margin: 24px 0px 14px;
+        }
+        
+        .eighth-container .create {
+            background-color: white;
+            border: 2px solid black;
+            color: black;
+            padding: 10px 25px;
+            text-align: center;
+            margin-left: 13cm;
+        }
+        
+        input[type="date"]::-webkit-inner-spin-button,
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+        
+        @media print {
+            .create {
+                display: none;
+                margin: 0px;
+            }
+            .picture-1 {
+                display: none;
+                margin: 0px;
+            }
+            #clear {
+                display: none;
+                margin: 0px;
+            }
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba( 255, 255, 255, 0.8);
+            /* White with 80% transparency */
+            display: none;
+        }
+        
+        .loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 8px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="overlay" class="overlay"></div>
+    <div id="loader" class="loader"></div>
+    <form>
+        <div class="header">
+            <img src="/img/logo.png" alt="logo" />
+            <div class="h3">Անձնական թերթիկ</div>
+        </div>
+        <div class="first-container">
+            <div class="line-1">
+                <h8>
+                    <h7>* </h7>1.Անուն, ազգանուն, հայրանուն </h8><br />
+                <h8>
+                    <h7>* </h7>2.Ծննդյան ամսաթիվ </h8><br />
+                <h8>
+                    <h7>* </h7>4.Քաղաքացիություն </h8><br />
+                <h8>
+                    <h7>* </h7>5.Անձնագրի N </h8><br />
+                <h8>
+                    <h7>* </h7>7.Սոց․քարտի N </h8><br />
+                <h8>
+                    <h7>* </h7>9.Գրանցման հասցե </h8><br />
+                <h8>
+                    <h7>* </h7>10.Բնակության հասցե </h8><br />
+                <h8>
+                    <h7>* </h7>11.Քաղաքային հեռախոս </h8><br />
+                <h8>
+                    <h7>* </h7>13.Էլ․փոստ </h8><br />
+            </div>
+            <div class="line-2">
+                <input name="name" type="text" class="full-width" style="margin-top: 0" required />
+                <br />
+                <input name="birthdate" class="half-width" required id="birthdate" type="text" onfocus="this.placeholder='dd/mm/yyyy'" onblur="this.placeholder=''" />
+                <h9>3.Ծննդյան վայր
+                    <h7>*</h7>
+                </h9>
+                <input name="place" type="text" class="half-width" style="width: 4.2cm" required />
+                <br />
+                <input name="citizenship" type="text" class="full-width" required />
+                <br />
+                <input name="passport" type="text" class="half-width" style="width: 5cm" required />
+                <h9 class="right-1">
+                    <h7>* </h7>6.Տրված</h9>
+                <input name="soc_card" type="text" id="soc_card" onfocus="this.placeholder='dd/mm/yyyy'" onblur="this.placeholder=''" class="half-width" style="width: 2.5cm" required />
+                <br />
+                <input name="soc_number" type="text" class="half-width" style="width: 5.1cm" required />
+                <h9 class="right-2">
+                    <h7>* </h7>8.Ում կողմից </h9>
+                <input name="from_whom" type="text" class="half-width" style="width: 2.4cm" required />
+                <br />
+                <input name="registration_address" type="text" class="full-width" required />
+                <br />
+                <input name="residence_address" type="text" class="full-width" required />
+                <br />
+                <input name="city_number" type="tel" class="half-width" required />
+                <h9 class="right-3">
+                    <h7>* </h7>12.Բջջային հեռախոս </h9>
+                <input name="mobile_number" type="tel" class="half-width" style="width: 2.8cm" required />
+                <br />
+                <input name="address" type="text" class="full-width" required />
+                <br />
+            </div>
+            <div>
+                <p>Լուսանկար</p>
+                <input type="file" class="picture-1" id="imageSelector" accept="image/png, image/jpeg" onchange="displaySelectedImage()" /><br />
+                <img type="image" class="picture" name="image" id="selectedImage" /><br />
+            </div>
+        </div>
+        <div class="second-container">
+            <br />
+            <h9><span><h7>* </h7>14.Կրթություն</span> Խնդրում ենք նշել վերջին 4 ուսումնական հաստատությունները, որտեղ Դուք սովորել եք (դպրոց, ԲՈՒՀ և այլն)` սկսած վերջին ուսումնական հաստատությունից</h9>
+            <div class="education">
+                <div class="first-line">
+                    <h10>Հաստատության անվանում</h10>
+                    <textarea name="institution-1" type="text" required></textarea>
+                    <br />
+                    <textarea name="institution-2" type="text"></textarea><br />
+                    <textarea name="institution-3" type="text"></textarea><br />
+                    <textarea name="institution-4" type="text"></textarea><br />
+                </div>
+                <div class="second-line">
+                    <h10>Ուսման տարեթվեր</h10>
+                    <input name="dates-start-1" type="number" />
+                    <h7> - </h7> <input name="dates-end-1" type="number" /><br />
+                    <input name="dates-start-2" type="number" />
+                    <h7> - </h7> <input name="dates-end-2" type="number" /><br />
+                    <input name="dates-start-3" type="number" />
+                    <h7> - </h7> <input name="dates-end-3" type="number" /><br />
+                    <input name="dates-start-4" type="number" />
+                    <h7> - </h7> <input name="dates-end-4" type="number" /><br />
+                </div>
+                <div class="third-line">
+                    <h10>Մասնագիտություն</h10>
+                    <textarea name="profession-1" type="text"></textarea> <br />
+                    <textarea name="profession-2" type="text"></textarea> <br />
+                    <textarea name="profession-3" type="text"></textarea><br />
+                    <textarea name="profession-4" type="text"></textarea> <br />
+                </div>
+            </div>
+        </div>
+        <div class="third-container">
+            <br />
+            <h8>
+                <h7>* </h7>15.Ընտանեկան կարգավիճակ </h8><br />
+            <h9>Ամուսնացած</h9><input type="checkbox" name="married" class="small-width" />
+            <h9>Չամուսնացած</h9><input type="checkbox" name="single" class="small-width" /><br />
+
+            <h9>
+                <h8>
+                    <h7>* </h7>16.Ընտանիքի կազմը՝</h8>(ծնողներ, քույր, եղբայր, ամուսին/կին, երեխա)</h9>
+            <div class="education">
+                <div class="line-1">
+                    <h10>Փոխկապակցվածություն</h10>
+                    <textarea name="fam-interconnectedness-1" type="text" required></textarea>
+                    <textarea name="fam-interconnectedness-2" type="text"></textarea>
+                    <textarea name="fam-interconnectedness-3" type="text"></textarea>
+                    <textarea name="fam-interconnectedness-4" type="text"></textarea>
+                    <textarea name="fam-interconnectedness-5" type="text"></textarea>
+                    <textarea name="fam-interconnectedness-6" type="text"></textarea>
+                    <textarea name="fam-interconnectedness-7" type="text"></textarea>
+                </div>
+                <div class="line">
+                    <h10>Անուն, ազգանուն</h10>
+                    <textarea name="family-name-1" type="text"></textarea>
+                    <textarea name="family-name-2" type="text"></textarea>
+                    <textarea name="family-name-3" type="text"></textarea>
+                    <textarea name="family-name-4" type="text"></textarea>
+                    <textarea name="family-name-5" type="text"></textarea>
+                    <textarea name="family-name-6" type="text"></textarea>
+                    <textarea name="family-name-7" type="text"></textarea>
+                </div>
+                <div class="line">
+                    <h10>Աշխատանքի վայր</h10>
+                    <textarea name="workplace-1" type="text"></textarea>
+                    <textarea name="workplace-2" type="text"></textarea>
+                    <textarea name="workplace-3" type="text"></textarea>
+                    <textarea name="workplace-4" type="text"></textarea>
+                    <textarea name="workplace-5" type="text"></textarea>
+                    <textarea name="workplace-6" type="text"></textarea>
+                    <textarea name="workplace-7" type="text"></textarea>
+                </div>
+                <div class="line">
+                    <h10>Պաշտոն</h10>
+                    <textarea name="position-1" type="text"></textarea>
+                    <textarea name="position-2" type="text"></textarea>
+                    <textarea name="position-3" type="text"></textarea>
+                    <textarea name="position-4" type="text"></textarea>
+                    <textarea name="position-5" type="text"></textarea>
+                    <textarea name="position-6" type="text"></textarea>
+                    <textarea name="position-7" type="text"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="fourth-container">
+            <br />
+            <div class="first-line">
+                <br />
+                <p>17.Զին ծառայություն</p>
+                <p>18.Վարորդական իրավունք</p>
+                <p>19.Դատվածության առկայություն</p>
+            </div>
+            <div class="second-line">
+                <input name="service" type="checkbox" class="small-width" /><br />
+                <input name="driving-license" type="checkbox" class="small-width" /><br />
+                <input name="conviction" type="checkbox" class="small-width" /><br />
+            </div>
+            <div class="third-line">
+                <h8>ծառայության ժամկետը՝</h8><br />
+                <h8>կարգը՝</h8>
+                <input name="order" type="text" class="small-width-1" /><br />
+                <h8>դատվածության ժամկետը՝</h8>
+            </div>
+            <div class="fourth-line">
+                <h10>սկսած</h10><br />
+                <input name="service-start" class="half-width" type="text" id="service-start" onfocus="this.placeholder='dd/mm/yyyy'" onblur="this.placeholder=''" /><br />
+                <p>տրման ամսաթիվ՝</p>
+                <input name="conviction-start" class="half-width-2" type="text" id="conviction-start" onfocus="this.placeholder='dd/mm/yyyy'" onblur="this.placeholder=''" /><br />
+            </div>
+            <div class="fifth-line">
+                <h10>մինչև</h10><br />
+                <input name="service-end" class="half-width" type="text" id="servicee-end" onfocus="this.placeholder='dd/mm/yyyy'" onblur="this.placeholder=''" /><br />
+                <input name="driving-date" class="half-width-3" type="text" id="driving-date" onfocus="this.placeholder='dd/mm/yyyy'" onblur="this.placeholder=''" /><br />
+                <h10>մինչև</h10><br />
+                <input name="conviction-end" class="half-width" type="text" id="conviction-end" onfocus="this.placeholder='dd/mm/yyyy'" onblur="this.placeholder=''" /><br />
+            </div>
+        </div>
+        <div class="fifth-container">
+            <br />
+            <span><h7>* </h7>20.Եթե ունեք ծանոթ, բարեկամ կամ որևէ փոխկապակցված անձ այլ
+          ապահովագրական ընկերություններում աշխատող(այդ թվում ԷՖԵՍ-ում), ապա
+          խնդրում ենք նշել փոխկապակցվաժության տեսակը, անուն, ազգանուն և
+          ապահովագրական ընկերության անվանում</span
+        >
+        <div class="education">
+          <div class="first-line">
+            <h10>Փոխկապակցվածություն</h10>
+            <input name="emp-interconnectedness-1" type="text" required />
+            <input name="emp-interconnectedness-2" type="text" />
+            <input name="emp-interconnectedness-3" type="text" />
+            <input name="emp-interconnectedness-4" type="text" />
+            <input name="emp-interconnectedness-5" type="text" />
+          </div>
+          <div class="second-line">
+            <h10 class="mid">Անուն, ազգանուն</h10>
+            <input name="employee-name-1" type="text" />
+            <input name="employee-name-2" type="text" />
+            <input name="employee-name-3" type="text" />
+            <input name="employee-name-4" type="text" />
+            <input name="employee-name-5" type="text" />
+          </div>
+          <div class="second-line">
+            <h10>Ապահովագրական ընկերություն</h10>
+            <input name="insurance-1" type="text" />
+            <input name="insurance-2" type="text" />
+            <input name="insurance-3" type="text" />
+            <input name="insurance-4" type="text" />
+            <input name="insurance-5" type="text" />
+          </div>
+        </div>
+        <span
+          ><h7>* </h7>21.Եթե նախկինում ունեցել եք աշխատանքային փորձ, ապա նշեք
+          ընկերության անունը և Ձեր զբաղեցրած պաշտոնը</span
+        >
+        <div class="education">
+          <div class="third-line-1">
+            <h11>Ընկերություն</h11>
+            <textarea name="company-1" type="text" required></textarea> <br />
+            <textarea name="company-2" type="text"></textarea> <br />
+            <textarea name="company-3" type="text"></textarea> <br />
+            <textarea name="company-4" type="text"></textarea> <br />
+            <textarea name="company-5" type="text"></textarea> <br />
+            <textarea name="company-6" type="text"></textarea> <br />
+          </div>
+          <div class="fourth-line">
+            <h11>Աշխատանքի տարեթվեր</h11>
+            <input
+              name="work-start-1"
+              type="text"
+              id="work-start-1"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            />
+            <input
+              name="work-end-1"
+              type="text"
+              id="work-end-1"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            /><br />
+            <input
+              name="work-start-2"
+              type="text"
+              id="work-start-2"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            />
+            <input
+              name="work-end-2"
+              type="text"
+              id="work-end-2"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            /><br />
+            <input
+              name="work-start-3"
+              type="text"
+              id="work-start-3"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            />
+            <input
+              name="work-end-3"
+              type="text"
+              id="work-end-3"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            /><br />
+            <input
+              name="work-start-4"
+              type="text"
+              id="work-start-4"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            />
+            <input
+              name="work-end-4"
+              type="text"
+              id="work-end-4"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            /><br />
+            <input
+              name="work-start-5"
+              type="text"
+              id="work-start-5"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            />
+            <input
+              name="work-end-5"
+              type="text"
+              id="work-end-5"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            /><br />
+            <input
+              name="work-start-6"
+              type="text"
+              id="work-start-6"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            />
+            <input
+              name="work-end-6"
+              type="text"
+              id="work-end-6"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+            /><br />
+          </div>
+          <div class="third-line-2">
+            <h11>Պաշտոն</h11>
+            <textarea name="company-position-1" type="text"></textarea><br />
+            <textarea name="company-position-2" type="text"></textarea><br />
+            <textarea name="company-position-3" type="text"></textarea><br />
+            <textarea name="company-position-4" type="text"></textarea><br />
+            <textarea name="company-position-5" type="text"></textarea><br />
+            <textarea name="company-position-6" type="text"></textarea><br />
+          </div>
+        </div>
+        <span><h7>* </h7>22.Ինչով եք սիրում զբաղվել ազատ ժամանակ</span>
+            <div class="full-line">
+                <h8>Հոբբի</h8>
+                <input name="hobby" type="text" required />
+            </div>
+            <span><h7>* </h7>23.Արդյոք Դուք կամ Ձեր ընտանիքի անդամներից որևիցե մեկը
+          հանդիսանում է անհատ ձեռներեց։ Եթե այո, ապա խնդրում ենք նշել
+          ոլորտը</span
+        >
+        <div class="full-line">
+          <h8>Ոլորտ</h8>
+          <input name="sphere" type="text" required />
+        </div>
+      </div>
+      <div class="sixth-container">
+        <br />
+        <span
+          ><h7>* </h7>24.Նշեք երկու ոչ փոխկապակցված անձանց տվյալներ, ովքեր կարող
+          են Ձեր մասին տալ հետադարձ կապ</span
+        >
+        <div class="education">
+          <div class="first-line">
+            <h10>Անուն, ազգանուն</h10>
+            <input name="relative-name-1" type="text" required />
+            <input name="relative-name-2" type="text" />
+          </div>
+          <div class="second-line">
+            <h10 class="sixth">Պաշտոն</h10>
+            <input name="relative-position-1" type="text" />
+            <input name="relative-position-2" type="text" />
+          </div>
+          <div class="third-line">
+            <h10>Հեռախոսահամար</h10>
+            <input name="relative-phone-1" type="text" />
+            <input name="relative-phone-2" type="text" />
+          </div>
+        </div>
+      </div>
+      <div class="seventh-container">
+        <span
+          ><h7>* </h7>25.Նշեք այն ապահովագրական ընկերության անվանումը, որում
+          Դուք կամ Ձեր ընտանիքի անդամներից որևիցե մեկը ունեցել է
+          ապահովագրություն</span
+        >
+        <div class="education">
+          <div class="first-line">
+            <h10>Ապահովագրական ընկերության անվանում</h10>
+            <input name="insurance-name-1" type="text" required />
+            <input name="insurance-name-2" type="text" />
+            <input name="insurance-name-3" type="text" />
+          </div>
+          <div class="second-line">
+            <h10>Ապահովագրության տեսակ</h10>
+            <input name="insurance-type-1" type="text" />
+            <input name="insurance-type-2" type="text" />
+            <input name="insurance-type-3" type="text" />
+          </div>
+        </div>
+        <span
+          ><h7>* </h7>26.Նշեք Ձեր ընտանիքի անդամներից որևիցե մեկի տվյալները, ում
+          հետ հնարավոր կլինի կապ հաստատել Ձեր բացակայության ժամանակ</span
+        >
+        <div class="education">
+          <div class="third-line">
+            <h9>Փոխկապակցվածություն</h9>
+            <input name="family-member-1" type="text" required />
+          </div>
+          <div class="third-line">
+            <h10>Անուն, ազգանուն</h10>
+            <input name="family-member-2" type="text" />
+          </div>
+          <div class="third-line">
+            <h9>Քաղաքային հեռախոսահամար</h9>
+            <input name="family-member-3" type="text" />
+          </div>
+          <div class="third-line">
+            <h9>Բջջային հեռախոսահամար</h9>
+            <input name="family-member-4" type="text" />
+          </div>
+        </div>
+        <span
+          ><h7>* </h7>27.Ապահովագրական ընկերության որ ստորաբաժանումում
+          կցանկանայիք աշխատել</span
+        >
+        <div class="education">
+          <div class="fourth-line">
+            <h10>Ստորաբաժանման անվանումը</h10>
+            <input name="department-name" type="text" required />
+          </div>
+        </div>
+      </div>
+      <div class="eighth-container">
+        <div class="education">
+          <div class="text">
+            <p>
+              Սույնով հավաստում եմ, որ լրացված ամբողջ տեղեկատվությունը
+              համապատասխանում է իրականությանը և որ դիտավորյալ չեմ թաքցրել որևէ
+              ինֆորմացիա։ Պարտավորվում եմ վերոնշյալ տեղեկությունների մեջ
+              փոփոխությունների դեպքում տեղեկացնել Ընկերությանը մեկ աշխատանքային
+              շաբաթվա ընթացքում։
+            </p>
+          </div>
+          <div class="first-line">
+            <p>Ամսաթիվ</p>
+            <p>Էլ.հասցե</p>
+          </div>
+          <div class="second-line">
+            <input
+              name="date"
+              type="text"
+              id="date"
+              onfocus="this.placeholder='dd/mm/yyyy'"
+              onblur="this.placeholder=''"
+              required
+            /><br />
+            <input type="email", name="verification">
+          </div>
+        </div>
+        <button class="create" type="submit">Ուղարկել</button>
+      </div>
+    </form>
+    <script src="scripts/new.js"></script>
+    <script src="scripts/display.js"></script>
+    <script>
+      var inputs = document.querySelectorAll("input[type='text'][id]");
+
+      inputs.forEach(function (input) {
+        input.addEventListener("input", function (event) {
+          var value = event.target.value;
+
+          value = value.replace(/\D/g, "");
+
+          if (value.length > 2 && value.length < 5) {
+            value = value.slice(0, 2) + "/" + value.slice(2);
+          } else if (value.length >= 5) {
+            value =
+              value.slice(0, 2) +
+              "/" +
+              value.slice(2, 4) +
+              "/" +
+              value.slice(4, 8);
+          }
+
+          console.log(value);
+
+          event.target.value = value;
+
+          if (!isValidDate(value)) {
+            event.target.setCustomValidity(
+              "Please enter a valid date in the format dd/mm/yyyy."
+            );
+          } else {
+            event.target.setCustomValidity("");
+          }
+        });
+      });
+
+      function isValidDate(dateString) {
+        var regex =
+          /^(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[0-2])\/(19|20)\d{2}$/;
+        return regex.test(dateString);
+      }
+    </script>
+    <script>
+      const checkboxes = document.querySelectorAll(
+        '.third-container input[type="checkbox"]'
+      );
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+          if (this.checked) {
+            checkboxes.forEach((cb) => {
+              if (cb !== this) {
+                cb.checked = false;
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
